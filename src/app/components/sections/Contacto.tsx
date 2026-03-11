@@ -35,7 +35,7 @@ export default function Contacto() {
               </label>
               <input
                 type="text"
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2F8DBA]"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 text-[#0F2A3A] focus:outline-none focus:ring-2 focus:ring-[#2F8DBA]"
                 placeholder="Tu nombre"
               />
             </div>
@@ -46,7 +46,7 @@ export default function Contacto() {
               </label>
               <input
                 type="email"
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2F8DBA]"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 text-[#0F2A3A] focus:outline-none focus:ring-2 focus:ring-[#2F8DBA]"
                 placeholder="tu@email.com"
               />
             </div>
@@ -57,7 +57,7 @@ export default function Contacto() {
               </label>
               <textarea
                 rows={4}
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2F8DBA]"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 text-[#0F2A3A] focus:outline-none focus:ring-2 focus:ring-[#2F8DBA]"
                 placeholder="¿Cómo podemos ayudarte?"
               />
             </div>
