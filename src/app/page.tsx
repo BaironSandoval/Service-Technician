@@ -11,6 +11,12 @@ import Contacto from "./components/sections/Contacto"
 import Footer from "./components/layout/Footer"
 import WhatsAppFloat from "./components/ui/WhatsAppFloat"
 
+export const metadata = {
+  title: "Servicio Técnico de Computadores",
+  description:
+    "Reparación profesional de computadores, impresoras y equipos tecnológicos.",
+};
+
 export default function Home() {
   return (
     <>
