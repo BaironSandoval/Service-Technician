@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Hero() {
   return (
-    <section className="relative text-white overflow-hidden">
+    <section className="relative bg-gradient-to-r from-[#0F2A3A] to-[#2F8DBA] text-white overflow-hidden">
 
       {/* IMAGEN DESKTOP */}
       <div className="absolute inset-0 hidden md:block">
@@ -17,13 +17,13 @@ export default function Hero() {
 
       {/* IMAGEN MOBILE */}
       <div className="absolute inset-0 md:hidden">
-        <Image
+        {/* <Image
           src="/hero_mobile.png"
           alt="Servicio técnico"
           fill
           priority
           className="object-cover"
-        />
+        /> */}
 
         {/* OVERLAY OSCURO */}
         <div className="absolute inset-0 bg-black/45"></div>
