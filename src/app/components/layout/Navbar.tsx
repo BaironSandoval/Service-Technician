@@ -8,16 +8,14 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 bg-[#031C3A]/95 backdrop-blur shadow-md">
 
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="flex items-center justify-between h-20">
 
           {/* LOGO */}
-
           <div className="flex items-center gap-3">
-
             <a href="/">
               <Image
                 src="/logo.png"
@@ -27,33 +25,31 @@ export default function Navbar() {
               />
             </a>
 
-            <span className="font-semibold text-[#0F2A3A] text-lg">
+            <span className="font-semibold text-white text-lg">
               Intelcenter Tecnología
             </span>
-
           </div>
 
           {/* MENU DESKTOP */}
+          <nav className="hidden md:flex items-center gap-8 text-[#D9E1E8] font-medium">
 
-          <nav className="hidden md:flex items-center gap-8 text-[#0F2A3A] font-medium">
-
-            <a href="#" className="hover:text-[#2F8DBA] transition">
+            <a href="#" className="hover:text-[#59E1E6] transition">
               Inicio
             </a>
 
-            <a href="#services" className="hover:text-[#2F8DBA] transition">
+            <a href="#services" className="hover:text-[#59E1E6] transition">
               Servicios
             </a>
 
-            <a href="#contact" className="hover:text-[#2F8DBA] transition">
+            <a href="#contact" className="hover:text-[#59E1E6] transition">
               Contacto
             </a>
 
             {/* BOTON WHATSAPP */}
-
             <a
-              href="https://wa.me/573144486688"
-              className="flex items-center gap-2 bg-[#8BC34A] hover:bg-[#7ab63f] text-black px-4 py-2 rounded-lg transition"
+              href="https://wa.me/573136951496"
+              target="_blank"
+              className="flex items-center gap-2 bg-[#59E1E6] hover:bg-[#7FEAF0] text-[#031C3A] px-4 py-2 rounded-lg transition font-semibold shadow-md"
             >
               <MessageCircle size={18} />
               WhatsApp
@@ -62,9 +58,8 @@ export default function Navbar() {
           </nav>
 
           {/* BOTON MOVIL */}
-
           <button
-            className="md:hidden"
+            className="md:hidden text-white"
             onClick={() => setOpen(!open)}
           >
             {open ? <X size={26} /> : <Menu size={26} />}
@@ -75,22 +70,20 @@ export default function Navbar() {
       </div>
 
       {/* MENU MOVIL */}
-
       {open && (
+        <div className="md:hidden bg-[#031C3A] border-t border-[#0F4C6B]">
 
-        <div className="md:hidden bg-white border-t">
+          <div className="flex flex-col px-6 py-6 gap-4 text-[#D9E1E8] font-medium">
 
-          <div className="flex flex-col px-6 py-6 gap-4 text-[#0F2A3A] font-medium">
+            <a href="#" className="hover:text-[#59E1E6]">Inicio</a>
 
-            <a href="#">Inicio</a>
+            <a href="#services" className="hover:text-[#59E1E6]">Servicios</a>
 
-            <a href="#services">Servicios</a>
-
-            <a href="#contact">Contacto</a>
+            <a href="#contact" className="hover:text-[#59E1E6]">Contacto</a>
 
             <a
-              href="https://wa.me/573144486688"
-              className="flex items-center justify-center gap-2 bg-[#8BC34A] text-black px-4 py-3 rounded-lg"
+              href="https://wa.me/573136951496"
+              className="flex items-center justify-center gap-2 bg-[#59E1E6] text-[#031C3A] px-4 py-3 rounded-lg font-semibold"
             >
               <MessageCircle size={18} />
               WhatsApp
@@ -99,7 +92,6 @@ export default function Navbar() {
           </div>
 
         </div>
-
       )}
 
     </header>

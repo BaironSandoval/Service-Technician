@@ -2,31 +2,22 @@ import Image from "next/image"
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-r from-[#0F2A3A] to-[#2F8DBA] text-white overflow-hidden">
+    <section className="relative bg-gradient-to-r from-[#031C3A] via-[#0B3A5B] to-[#0F4C6B] text-white overflow-hidden">
 
       {/* IMAGEN DESKTOP */}
       <div className="absolute inset-0 hidden md:block">
         <Image
-          src="/hero_desktop.png"
+          src="/Hero_Deskt.png"
           alt="Servicio técnico"
           fill
           priority
-          className="object-cover"
+          className="object-cover opacity-60"
         />
       </div>
 
       {/* IMAGEN MOBILE */}
       <div className="absolute inset-0 md:hidden">
-        {/* <Image
-          src="/hero_mobile.png"
-          alt="Servicio técnico"
-          fill
-          priority
-          className="object-cover"
-        /> */}
-
-        {/* OVERLAY OSCURO */}
-        <div className="absolute inset-0 bg-black/45"></div>
+        <div className="absolute inset-0 bg-[#031C3A]/80"></div>
       </div>
 
       {/* CONTENIDO */}
@@ -35,30 +26,30 @@ export default function Hero() {
         <div className="max-w-xl space-y-6">
 
           <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-            Servicio Técnico Profesional
-            <span className="text-[#8BC34A] block">
-              Computadores, Impresoras y Electrónica
+            Servicio Técnico Especializado
+            <span className="text-[#59E1E6] block">
+              Computadores e Impresoras
             </span>
           </h1>
 
-          <p className="text-lg text-gray-200">
-            Diagnóstico, mantenimiento, reparación y venta de equipos
+          <p className="text-lg text-[#D9E1E8]">
+            Venta, diagnóstico, mantenimiento y reparación de equipos
             tecnológicos con garantía profesional y atención rápida.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
 
             <a
-              href="https://wa.me/573144486688"
+              href="https://wa.me/573136951496"
               target="_blank"
-              className="bg-[#8BC34A] hover:bg-[#7ab63f] text-black font-semibold px-6 py-3 rounded-lg transition text-center"
+              className="bg-[#59E1E6] hover:bg-[#7FEAF0] text-[#031C3A] font-semibold px-6 py-3 rounded-lg transition text-center shadow-lg"
             >
               Contactar por WhatsApp
             </a>
 
             <a
               href="#services"
-              className="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-[#0F2A3A] transition text-center"
+              className="border border-[#59E1E6] text-[#59E1E6] px-6 py-3 rounded-lg hover:bg-[#59E1E6] hover:text-[#031C3A] transition text-center"
             >
               Nuestros Servicios
             </a>

@@ -3,14 +3,13 @@ import Image from "next/image"
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0F2A3A] text-white">
+    <footer className="bg-[#031C3A] text-white">
 
       <div className="max-w-7xl mx-auto px-6 py-16">
 
         <div className="grid md:grid-cols-3 gap-12">
 
           {/* LOGO Y DESCRIPCIÓN */}
-
           <div>
 
             <div className="flex items-center gap-3 mb-4">
@@ -28,37 +27,36 @@ export default function Footer() {
 
             </div>
 
-            <p className="text-gray-300">
-              Servicio técnico profesional para computadores, impresoras,
-              televisores y equipos electrónicos con calidad garantizada.
+            <p className="text-[#D9E1E8]">
+              Servicio técnico especializado para computadores, impresoras,
+              televisores con calidad garantizada.
             </p>
 
           </div>
 
           {/* ENLACES */}
-
           <div>
 
             <h3 className="text-lg font-semibold mb-4">
               Enlaces Rápidos
             </h3>
 
-            <ul className="space-y-2 text-gray-300">
+            <ul className="space-y-2 text-[#D9E1E8]">
 
               <li>
-                <a href="#" className="hover:text-[#8BC34A] transition">
+                <a href="#" className="hover:text-[#59E1E6] transition">
                   Inicio
                 </a>
               </li>
 
               <li>
-                <a href="#services" className="hover:text-[#8BC34A] transition">
+                <a href="#services" className="hover:text-[#59E1E6] transition">
                   Servicios
                 </a>
               </li>
 
               <li>
-                <a href="#contact" className="hover:text-[#8BC34A] transition">
+                <a href="#contact" className="hover:text-[#59E1E6] transition">
                   Contacto
                 </a>
               </li>
@@ -68,41 +66,39 @@ export default function Footer() {
           </div>
 
           {/* CONTACTO */}
-
           <div>
 
             <h3 className="text-lg font-semibold mb-4">
               Contacto
             </h3>
 
-            <div className="space-y-3 text-gray-300">
+            <div className="space-y-3 text-[#D9E1E8]">
 
               <div className="flex items-center gap-3">
-                <Phone size={18} />
-                <span>+57 314 448 6688</span>
+                <Phone size={18} className="text-[#59E1E6]" />
+                <span>+57 313 695 1496</span>
               </div>
 
               <div className="flex items-center gap-3">
-                <Mail size={18} />
+                <Mail size={18} className="text-[#59E1E6]" />
                 <span>intelcentertecnologia@gmail.com</span>
               </div>
 
             </div>
 
             {/* REDES */}
-
             <div className="flex gap-4 mt-6">
 
               <a
                 href="#"
-                className="bg-[#2F8DBA] p-3 rounded-lg hover:bg-[#25759b] transition"
+                className="bg-[#0B3A5B] p-3 rounded-lg hover:bg-[#59E1E6] hover:text-[#031C3A] transition"
               >
                 <Facebook size={20} />
               </a>
 
               <a
                 href="#"
-                className="bg-[#2F8DBA] p-3 rounded-lg hover:bg-[#25759b] transition"
+                className="bg-[#0B3A5B] p-3 rounded-lg hover:bg-[#59E1E6] hover:text-[#031C3A] transition"
               >
                 <Instagram size={20} />
               </a>
@@ -116,8 +112,7 @@ export default function Footer() {
       </div>
 
       {/* COPYRIGHT */}
-
-      <div className="border-t border-gray-700 text-center py-6 text-gray-400">
+      <div className="border-t border-[#0F4C6B] text-center py-6 text-[#D9E1E8] text-sm">
 
         © {new Date().getFullYear()} Intelcenter Tecnología. Todos los derechos reservados.
 

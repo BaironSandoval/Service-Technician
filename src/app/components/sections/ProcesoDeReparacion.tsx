@@ -34,10 +34,9 @@ export default function ProcesoDeReparacion() {
       <div className="max-w-7xl mx-auto px-6">
 
         {/* TITULO */}
-
         <div className="text-center mb-20">
 
-          <h2 className="text-4xl font-bold text-[#0F2A3A]">
+          <h2 className="text-4xl font-bold text-[#031C3A]">
             Nuestro Proceso de Reparación
           </h2>
 
@@ -49,31 +48,25 @@ export default function ProcesoDeReparacion() {
         </div>
 
         {/* PASOS */}
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
 
           {steps.map((step, index) => {
             const Icon = step.icon
 
             return (
-              <div
-                key={index}
-                className="relative text-center"
-              >
+              <div key={index} className="relative text-center">
 
                 {/* NUMERO */}
-
-                <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#8BC34A] text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shadow">
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#031C3A] text-[#59E1E6] w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-md">
                   {index + 1}
                 </div>
 
                 {/* TARJETA */}
-
-                <div className="bg-[#F5F7FA] p-10 rounded-xl shadow-sm hover:shadow-lg transition">
+                <div className="bg-[#F5F7FA] p-10 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition">
 
                   <div className="flex justify-center mb-6">
 
-                    <div className="bg-[#2F8DBA] text-white p-4 rounded-full">
+                    <div className="bg-[#031C3A] text-[#59E1E6] p-4 rounded-full">
 
                       <Icon size={28} />
 
@@ -81,7 +74,7 @@ export default function ProcesoDeReparacion() {
 
                   </div>
 
-                  <h3 className="text-xl font-semibold text-[#0F2A3A] mb-3">
+                  <h3 className="text-xl font-semibold text-[#031C3A] mb-3">
                     {step.title}
                   </h3>
 

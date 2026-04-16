@@ -7,56 +7,53 @@ import {
 
 const services = [
   {
-    icon: Wrench,
-    title: "Reparación de Equipos",
-    description:
-      "Reparación profesional de computadores, impresoras, televisores y dispositivos electrónicos."
-  },
-  {
-    icon: Settings,
-    title: "Mantenimiento Preventivo",
-    description:
-      "Mejora el rendimiento y prolonga la vida útil de tus equipos tecnológicos."
-  },
-  {
-    icon: Monitor,
-    title: "Diagnóstico Técnico",
-    description:
-      "Diagnóstico rápido y preciso para identificar fallas de hardware o software."
-  },
-  {
     icon: ShoppingCart,
     title: "Venta de Equipos",
     description:
-      "Venta de computadores, impresoras y accesorios tecnológicos con garantía."
-  }
+      "Nuevos y usados, Portátiles, Todo en uno, Equipos de escritorio, impresoras inkjet y toner, pantallas y periféricos, alquiler."
+  },
+  {
+    icon: Wrench,
+    title: "Mantenimiento y Reparación",
+    description:
+      "Fallas de software y hardware, diagnóstico, cambio de componentes, limpieza interna, optimización de rendimiento."
+  },
+  {
+    icon: Settings,
+    title: "Instalación de Sistemas y Programas",
+    description:
+      "Formateo, instalación de sistemas operativos, Office, antivirus y software de diseño e ingeniería."
+  },
+  {
+    icon: Monitor,
+    title: "Partes y Accesorios",
+    description:
+      "Pantallas, teclados, mouse, periféricos, discos duros, memorias, boards, baterías, redes y cableado."
+  },
 ]
 
 export default function Servicios() {
   return (
     <section
       id="services"
-      className="bg-[#F5F7FA] py-24"
+      className="bg-white py-24"
     >
       <div className="max-w-7xl mx-auto px-6">
 
         {/* TITULO */}
-
         <div className="text-center mb-16">
 
-          <h2 className="text-4xl font-bold text-[#0F2A3A]">
+          <h2 className="text-4xl font-bold text-[#031C3A]">
             Nuestros Servicios
           </h2>
 
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            Soluciones técnicas profesionales para computadores, impresoras,
-            televisores y equipos electrónicos.
+          <p className="text-[#0F4C6B] mt-4 max-w-2xl mx-auto">
+            Soluciones técnicas profesionales para computadores, impresoras y equipos electrónicos.
           </p>
 
         </div>
 
         {/* GRID SERVICIOS */}
-
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
 
           {services.map((service, index) => {
@@ -65,12 +62,12 @@ export default function Servicios() {
             return (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl transition"
+                className="bg-[#F5F7FA] rounded-xl p-8 text-center hover:shadow-xl hover:-translate-y-1 transition"
               >
 
                 <div className="flex justify-center mb-6">
 
-                  <div className="bg-[#2F8DBA] text-white p-4 rounded-full">
+                  <div className="bg-[#031C3A] text-[#59E1E6] p-4 rounded-full shadow-md">
 
                     <Icon size={28} />
 
@@ -78,11 +75,11 @@ export default function Servicios() {
 
                 </div>
 
-                <h3 className="text-xl font-semibold text-[#0F2A3A] mb-3">
+                <h3 className="text-xl font-semibold text-[#031C3A] mb-3">
                   {service.title}
                 </h3>
 
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-sm leading-relaxed">
                   {service.description}
                 </p>
 

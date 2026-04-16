@@ -9,46 +9,39 @@ export default function AboutUs() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* IMAGEN */}
-
           <div className="flex justify-center lg:justify-start">
-
             <Image
-              src="/about-tech.png"
+              src="/about_tech.png"
               alt="servicio técnico"
               width={500}
               height={500}
               className="rounded-xl shadow-lg w-full max-w-md lg:max-w-lg"
             />
-
           </div>
 
           {/* CONTENIDO */}
-
           <div className="text-center lg:text-left">
 
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F2A3A] mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#031C3A] mb-6">
               Sobre Nuestra Empresa
             </h2>
 
             <p className="text-gray-600 mb-6">
-              En <strong>Intelcenter Tecnología</strong> brindamos servicio
-              técnico profesional para computadores, impresoras, televisores
-              y dispositivos electrónicos.
+              En <strong className="text-[#031C3A]">Intelcenter Tecnología</strong> brindamos servicio
+              técnico profesional para computadores, impresoras y dispositivos electrónicos.
             </p>
 
             <p className="text-gray-600 mb-10">
               Nuestros técnicos ofrecen diagnóstico, mantenimiento y reparación
               utilizando herramientas profesionales y componentes de alta
-              calidad para garantizar los mejores resultados para nuestros
-              clientes.
+              calidad para garantizar los mejores resultados.
             </p>
 
             {/* ESTADÍSTICAS */}
-
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
 
-              <div className="bg-[#F5F7FA] p-5 rounded-lg">
-                <h3 className="text-xl md:text-2xl font-bold text-[#2F8DBA]">
+              <div className="bg-[#F5F7FA] p-5 rounded-lg text-center hover:shadow-md transition">
+                <h3 className="text-xl md:text-2xl font-bold text-[#0F4C6B]">
                   10+
                 </h3>
                 <p className="text-sm text-gray-600">
@@ -56,8 +49,8 @@ export default function AboutUs() {
                 </p>
               </div>
 
-              <div className="bg-[#F5F7FA] p-5 rounded-lg">
-                <h3 className="text-xl md:text-2xl font-bold text-[#2F8DBA]">
+              <div className="bg-[#F5F7FA] p-5 rounded-lg text-center hover:shadow-md transition">
+                <h3 className="text-xl md:text-2xl font-bold text-[#0F4C6B]">
                   1000+
                 </h3>
                 <p className="text-sm text-gray-600">
@@ -65,8 +58,8 @@ export default function AboutUs() {
                 </p>
               </div>
 
-              <div className="bg-[#F5F7FA] p-5 rounded-lg">
-                <h3 className="text-xl md:text-2xl font-bold text-[#2F8DBA]">
+              <div className="bg-[#F5F7FA] p-5 rounded-lg text-center hover:shadow-md transition">
+                <h3 className="text-xl md:text-2xl font-bold text-[#0F4C6B]">
                   24h
                 </h3>
                 <p className="text-sm text-gray-600">
@@ -74,8 +67,8 @@ export default function AboutUs() {
                 </p>
               </div>
 
-              <div className="bg-[#F5F7FA] p-5 rounded-lg">
-                <h3 className="text-xl md:text-2xl font-bold text-[#2F8DBA]">
+              <div className="bg-[#F5F7FA] p-5 rounded-lg text-center hover:shadow-md transition">
+                <h3 className="text-xl md:text-2xl font-bold text-[#0F4C6B]">
                   100%
                 </h3>
                 <p className="text-sm text-gray-600">
