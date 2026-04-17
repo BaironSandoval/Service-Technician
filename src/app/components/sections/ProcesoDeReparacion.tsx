@@ -1,4 +1,7 @@
+"use client"
+
 import { Search, FileText, Wrench, CheckCircle } from "lucide-react"
+import { useEffect, useRef, useState } from "react"
 
 const steps = [
   {
@@ -28,13 +31,32 @@ const steps = [
 ]
 
 export default function ProcesoDeReparacion() {
+  const ref = useRef<HTMLDivElement | null>(null)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setVisible(true)
+      },
+      { threshold: 0.2 }
+    )
+
+    if (ref.current) observer.observe(ref.current)
+
+    return () => {
+      if (ref.current) observer.unobserve(ref.current)
+    }
+  }, [])
+
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white" ref={ref}>
 
       <div className="max-w-7xl mx-auto px-6">
 
         {/* TITULO */}
-        <div className="text-center mb-20">
+        <div className={`text-center mb-20 transition-all duration-700
+          ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
 
           <h2 className="text-4xl font-bold text-[#031C3A]">
             Nuestro Proceso de Reparación
@@ -54,19 +76,31 @@ export default function ProcesoDeReparacion() {
             const Icon = step.icon
 
             return (
-              <div key={index} className="relative text-center">
+              <div
+                key={index}
+                className={`relative text-center group transition-all duration-500
+                ${visible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+                }`}
+                style={{ transitionDelay: `${index * 120}ms` }}
+              >
 
                 {/* NUMERO */}
-                <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#031C3A] text-[#59E1E6] w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-md">
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#031C3A] text-[#59E1E6] w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-md
+                  transition-transform duration-300 group-hover:scale-110">
                   {index + 1}
                 </div>
 
                 {/* TARJETA */}
-                <div className="bg-[#F5F7FA] p-10 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition">
+                <div className="bg-[#F5F7FA] p-10 rounded-xl shadow-sm
+                  hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02]
+                  transition-all duration-300">
 
                   <div className="flex justify-center mb-6">
 
-                    <div className="bg-[#031C3A] text-[#59E1E6] p-4 rounded-full">
+                    <div className="bg-[#031C3A] text-[#59E1E6] p-4 rounded-full
+                      transition-all duration-300 group-hover:scale-110 group-hover:bg-[#0F4C6B]">
 
                       <Icon size={28} />
 

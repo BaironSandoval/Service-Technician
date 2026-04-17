@@ -90,14 +90,16 @@ export default function Footer() {
             <div className="flex gap-4 mt-6">
 
               <a
-                href="#"
+                href="https://www.facebook.com/intelcentertecnologia/"
+                target="_blank"
                 className="bg-[#0B3A5B] p-3 rounded-lg hover:bg-[#59E1E6] hover:text-[#031C3A] transition"
               >
                 <Facebook size={20} />
               </a>
 
               <a
-                href="#"
+                href="https://www.instagram.com/intelcentertecnologia/"
+                target="_blank"
                 className="bg-[#0B3A5B] p-3 rounded-lg hover:bg-[#59E1E6] hover:text-[#031C3A] transition"
               >
                 <Instagram size={20} />

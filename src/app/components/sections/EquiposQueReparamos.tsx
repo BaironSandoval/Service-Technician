@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Monitor,
   Printer,
@@ -6,24 +8,44 @@ import {
   Smartphone,
   Cpu
 } from "lucide-react"
+import { useEffect, useRef, useState } from "react"
 
 const devices = [
-  { icon: Monitor, name: "Todo en uno" },
-  { icon: Laptop, name: "Portátiles" },
   { icon: Printer, name: "Impresoras y Suministros" },
+  { icon: Laptop, name: "Portátiles" },
+  { icon: Cpu, name: "Computadores de Escritorio" },
+  { icon: Monitor, name: "Todo en uno" },
   { icon: Tv, name: "Televisores" },
   { icon: Smartphone, name: "Dispositivos Móviles" },
-  { icon: Cpu, name: "Computadores de Escritorio" }
 ]
 
 export default function EquiposQueReparamos() {
+  const ref = useRef<HTMLDivElement | null>(null)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setVisible(true)
+      },
+      { threshold: 0.2 }
+    )
+
+    if (ref.current) observer.observe(ref.current)
+
+    return () => {
+      if (ref.current) observer.unobserve(ref.current)
+    }
+  }, [])
+
   return (
-    <section className="py-24 bg-[#F5F7FA]">
+    <section className="py-24 bg-[#F5F7FA]" ref={ref}>
 
       <div className="max-w-7xl mx-auto px-6">
 
         {/* TITULO */}
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-700
+          ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
 
           <h2 className="text-4xl font-bold text-[#031C3A]">
             Equipos que Reparamos
@@ -45,10 +67,20 @@ export default function EquiposQueReparamos() {
             return (
               <div
                 key={index}
-                className="bg-white border border-gray-100 rounded-xl p-8 flex flex-col items-center text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition"
+                className={`bg-white border border-gray-100 rounded-xl p-8 flex flex-col items-center text-center
+                shadow-sm transition-all duration-500
+                hover:shadow-lg hover:-translate-y-1 hover:scale-105
+                ${visible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+                }`}
+                style={{
+                  transitionDelay: `${index * 100}ms`
+                }}
               >
 
-                <div className="bg-[#031C3A] text-[#59E1E6] p-4 rounded-full mb-4 shadow-sm">
+                <div className="bg-[#031C3A] text-[#59E1E6] p-4 rounded-full mb-4 shadow-sm
+                  transition-all duration-300 group-hover:scale-110">
 
                   <Icon size={30} />
 

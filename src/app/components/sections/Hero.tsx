@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative bg-gradient-to-r from-[#031C3A] via-[#0B3A5B] to-[#0F4C6B] text-white overflow-hidden">
 
       {/* IMAGEN DESKTOP */}
-      <div className="absolute inset-0 hidden md:block">
+      <div className="absolute inset-0 hidden md:block animate-fadeUp">
         <Image
           src="/Hero_Deskt.png"
           alt="Servicio técnico"
@@ -25,19 +25,19 @@ export default function Hero() {
 
         <div className="max-w-xl space-y-6">
 
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight animate-fadeUp">
             Servicio Técnico Especializado
             <span className="text-[#59E1E6] block">
-              Computadores e Impresoras
+              Computadores, Impresoras y Televisores
             </span>
           </h1>
 
-          <p className="text-lg text-[#D9E1E8]">
+          <p className="text-lg text-[#D9E1E8] animate-fadeUp animate-delay-1">
             Venta, diagnóstico, mantenimiento y reparación de equipos
             tecnológicos con garantía profesional y atención rápida.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-fadeUp animate-delay-2">
 
             <a
               href="https://wa.me/573136951496"

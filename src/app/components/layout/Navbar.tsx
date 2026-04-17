@@ -83,6 +83,7 @@ export default function Navbar() {
 
             <a
               href="https://wa.me/573136951496"
+              target="_blank"
               className="flex items-center justify-center gap-2 bg-[#59E1E6] text-[#031C3A] px-4 py-3 rounded-lg font-semibold"
             >
               <MessageCircle size={18} />

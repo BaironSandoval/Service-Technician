@@ -1,9 +1,12 @@
+"use client"
+
 import {
   Wrench,
   Settings,
   Monitor,
   ShoppingCart
 } from "lucide-react"
+import { useEffect, useRef, useState } from "react"
 
 const services = [
   {
@@ -33,15 +36,35 @@ const services = [
 ]
 
 export default function Servicios() {
+  const ref = useRef<HTMLDivElement | null>(null)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setVisible(true)
+      },
+      { threshold: 0.2 }
+    )
+
+    if (ref.current) observer.observe(ref.current)
+
+    return () => {
+      if (ref.current) observer.unobserve(ref.current)
+    }
+  }, [])
+
   return (
     <section
       id="services"
       className="bg-white py-24"
+      ref={ref}
     >
       <div className="max-w-7xl mx-auto px-6">
 
         {/* TITULO */}
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-700
+          ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
 
           <h2 className="text-4xl font-bold text-[#031C3A]">
             Nuestros Servicios
@@ -62,7 +85,15 @@ export default function Servicios() {
             return (
               <div
                 key={index}
-                className="bg-[#F5F7FA] rounded-xl p-8 text-center hover:shadow-xl hover:-translate-y-1 transition"
+                className={`bg-[#F5F7FA] rounded-xl p-8 text-center
+                hover:shadow-xl hover:-translate-y-1 transition-all duration-700
+                ${visible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+                }`}
+                style={{
+                  transitionDelay: `${index * 150}ms`
+                }}
               >
 
                 <div className="flex justify-center mb-6">
