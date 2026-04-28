@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Menu, X, MessageCircle } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -16,18 +17,22 @@ export default function Navbar() {
 
           {/* LOGO */}
           <div className="flex items-center gap-3">
-            <a href="/">
+            <a href="#">
               <Image
-                src="/logo.png"
+                src="/robot-logo.png"
                 alt="Intelcenter Tecnología"
                 width={45}
                 height={45}
               />
             </a>
 
-            <span className="font-semibold text-white text-lg">
-              Intelcenter Tecnología
-            </span>
+            <Image
+              src="/intelcenter-log.png" // guarda la imagen con ese nombre en /public
+              alt="Intelcenter Tecnología"
+              width={160}
+              height={40}
+              className="object-contain"
+            />
           </div>
 
           {/* MENU DESKTOP */}

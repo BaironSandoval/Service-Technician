@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Phone, Mail } from "lucide-react"
+import { Facebook, Instagram, Phone, Mail, Music2 } from "lucide-react"
 import Image from "next/image"
 
 export default function Footer() {
@@ -13,18 +13,20 @@ export default function Footer() {
           <div>
 
             <div className="flex items-center gap-3 mb-4">
-
               <Image
-                src="/logo.png"
+                src="/robot-logo.png"
                 alt="Intelcenter Tecnología"
                 width={50}
                 height={50}
               />
 
-              <h3 className="text-xl font-semibold">
-                Intelcenter Tecnología
-              </h3>
-
+              <Image
+                src="/intelcenter-log.png" // guarda la imagen con ese nombre en /public
+                alt="Intelcenter Tecnología"
+                width={160}
+                height={40}
+                className="object-contain"
+              />
             </div>
 
             <p className="text-[#D9E1E8]">
@@ -105,6 +107,14 @@ export default function Footer() {
                 <Instagram size={20} />
               </a>
 
+              <a
+                href="https://www.tiktok.com/@intelcentertecnologia"
+                target="_blank"
+                className="bg-[#0B3A5B] p-3 rounded-lg hover:bg-[#59E1E6] hover:text-[#031C3A] transition"
+              >
+                <Music2 size={20} />
+              </a>
+
             </div>
 
           </div>
@@ -113,11 +123,8 @@ export default function Footer() {
 
       </div>
 
-      {/* COPYRIGHT */}
       <div className="border-t border-[#0F4C6B] text-center py-6 text-[#D9E1E8] text-sm">
-
         © {new Date().getFullYear()} Intelcenter Tecnología. Todos los derechos reservados.
-
       </div>
 
     </footer>

@@ -7,7 +7,7 @@ export default function Hero() {
       {/* IMAGEN DESKTOP */}
       <div className="absolute inset-0 hidden md:block animate-fadeUp">
         <Image
-          src="/Hero_Deskt.png"
+          src="/Hero.png"
           alt="Servicio técnico"
           fill
           priority
