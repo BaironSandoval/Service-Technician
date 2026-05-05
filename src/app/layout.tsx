@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "servicio técnico tecnología",
   ],
   icons: {
-    icon: "/robot-logo-fondo.png",
+    icon: "/robot-logo.png",
   },
 };
 export default function RootLayout({

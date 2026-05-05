@@ -23,6 +23,7 @@ export default function Navbar() {
                 alt="Intelcenter Tecnología"
                 width={45}
                 height={45}
+                className="drop-shadow-[0_0_4px_white]"
               />
             </a>
 

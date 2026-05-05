@@ -4,34 +4,41 @@ import {
   Wrench,
   Settings,
   Monitor,
-  ShoppingCart
+  ShoppingCart,
+  Package
 } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
 const services = [
   {
     icon: ShoppingCart,
-    title: "Venta de Equipos",
+    title: "Venta y Alquiler de Equipos",
     description:
-      "Nuevos y usados, Portátiles, Todo en uno, Equipos de escritorio, impresoras inkjet y toner, pantallas y periféricos, alquiler."
+      "Nuevos y usados: portátiles, todo en uno, equipos de escritorio, impresoras de inyección y láser, monitores y televisores."
   },
   {
     icon: Wrench,
     title: "Mantenimiento y Reparación",
     description:
-      "Fallas de software y hardware, diagnóstico, cambio de componentes, limpieza interna, optimización de rendimiento."
+      "Diagnóstico de fallas, cambio de componentes, limpieza interna y mejora del rendimiento de sus equipos."
   },
   {
     icon: Settings,
-    title: "Instalación de Sistemas y Programas",
+    title: "Software y Configuración",
     description:
-      "Formateo, instalación de sistemas operativos, Office, antivirus y software de diseño e ingeniería."
+      "Formateo, actualizaciones e instalación de Office, antivirus y programas de diseño."
   },
   {
     icon: Monitor,
     title: "Partes y Accesorios",
     description:
-      "Pantallas, teclados, mouse, periféricos, discos duros, memorias, boards, baterías, redes y cableado."
+      "Pantallas, teclados, mouse, discos duros, memorias, tarjetas madre, baterías, redes y cableado."
+  },
+  {
+    icon: Package,
+    title: "Suministros",
+    description:
+      "Tintas, tóner, cartuchos, fusores, rodillos de arrastre (pick roller), almohadillas y papelería general: carpetas y todo lo necesario para su oficina."
   },
 ]
 
@@ -55,11 +62,7 @@ export default function Servicios() {
   }, [])
 
   return (
-    <section
-      id="services"
-      className="bg-white py-24"
-      ref={ref}
-    >
+    <section id="services" className="bg-white py-24" ref={ref}>
       <div className="max-w-7xl mx-auto px-6">
 
         {/* TITULO */}
@@ -76,8 +79,8 @@ export default function Servicios() {
 
         </div>
 
-        {/* GRID SERVICIOS */}
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        {/* GRID */}
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
           {services.map((service, index) => {
             const Icon = service.icon
@@ -85,20 +88,21 @@ export default function Servicios() {
             return (
               <div
                 key={index}
-                className={`bg-[#F5F7FA] rounded-xl p-8 text-center
-                hover:shadow-xl hover:-translate-y-1 transition-all duration-700
+                className={`bg-white border border-gray-200 rounded-2xl p-8 text-center
+                hover:shadow-2xl hover:-translate-y-2 transition-all duration-500
                 ${visible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"
                 }`}
                 style={{
-                  transitionDelay: `${index * 150}ms`
+                  transitionDelay: `${index * 120}ms`
                 }}
               >
 
                 <div className="flex justify-center mb-6">
 
-                  <div className="bg-[#031C3A] text-[#59E1E6] p-4 rounded-full shadow-md">
+                  <div className="bg-[#031C3A] text-[#59E1E6] p-4 rounded-full shadow-lg
+                  group-hover:scale-110 transition">
 
                     <Icon size={28} />
 

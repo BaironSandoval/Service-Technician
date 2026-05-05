@@ -18,6 +18,7 @@ export default function Footer() {
                 alt="Intelcenter Tecnología"
                 width={50}
                 height={50}
+                className="drop-shadow-[0_0_4px_white]"
               />
 
               <Image
