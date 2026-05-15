@@ -12,9 +12,12 @@ const devices = [
       "Cambio de pantalla, teclado, carcasa, board, batería, reparación electrónica, ampliación de RAM y SSD.",
     images: [
       "/equipos/l1.jpg",
-      "/equipos/l2.jpg",
+      "/equipos/l5.jpg",
       "/equipos/l3.jpg",
       "/equipos/laptop-4.jpg",
+      "/equipos/l2.jpg",
+      "/equipos/l6.jpg",
+      "/equipos/l7.jpg",
     ],
   },
   {
@@ -41,6 +44,14 @@ const devices = [
       "/equipos/pc2.jpg",
       "/equipos/pc3.jpg",
       "/equipos/pc4.jpg",
+      "/equipos/pc5.jpg",
+      "/equipos/pc6.jpg",
+      "/equipos/pc7.jpg",
+      "/equipos/pc8.jpg",
+      "/equipos/pc9.jpg",
+      "/equipos/pc10.jpg",
+      "/equipos/pc11.jpg",
+      "/equipos/pc12.jpg",
     ],
   },
   {
@@ -55,6 +66,8 @@ const devices = [
       "/equipos/allinone3.jpg",
       "/equipos/allinone4.jpg",
       "/equipos/allinone5.jpg",
+      "/equipos/allinone7.jpg",
+      "/equipos/allinone8.jpg",
     ],
   },
   {
@@ -82,6 +95,7 @@ const devices = [
       "/equipos/phone3.jpg",
       "/equipos/phone4.jpg",
       "/equipos/phone5.jpg",
+      "/equipos/phone6.jpg",
     ],
   },
 ];
