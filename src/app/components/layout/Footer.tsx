@@ -109,7 +109,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://www.tiktok.com/@intelcenter_tecnologia"
+                href="https://www.tiktok.com/@intelcentertecnologia"
                 target="_blank"
                 className="bg-[#0B3A5B] p-3 rounded-lg hover:bg-[#59E1E6] hover:text-[#031C3A] transition"
               >
