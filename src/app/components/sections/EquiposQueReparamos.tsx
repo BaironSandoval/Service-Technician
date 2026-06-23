@@ -96,6 +96,7 @@ const devices = [
       "/equipos/phone4.jpg",
       "/equipos/phone5.jpg",
       "/equipos/phone6.jpg",
+      "/equipos/phone7.jpg",
     ],
   },
 ];
